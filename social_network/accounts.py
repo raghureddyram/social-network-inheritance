@@ -13,7 +13,10 @@ class User(object):
         return self.posts
 
     def get_timeline(self):
-        return self.following + self.posts
+        timeline = []
+        for person in self.following:
+            timeline += person.posts
+        return timeline
 
     def follow(self, other):
         self.following.append(other)

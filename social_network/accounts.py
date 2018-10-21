@@ -8,6 +8,7 @@ class User(object):
         self.posts = []
 
     def add_post(self, post):
+        post.set_user(self)
         self.posts.append(post)
         return self.posts
 

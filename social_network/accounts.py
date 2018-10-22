@@ -10,7 +10,7 @@ class User(object):
     def add_post(self, post):
         post.set_user(self)
         self.posts.append(post)
-        return self.posts
+        return self.posts 
 
     def get_timeline(self):
         timeline = []
